@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AS — HNU Drives</title>
+  <meta name="description" content="HNU drives and community links — Google Drive and community levels.">
+  <meta name="theme-color" content="#0F131A">
+  <style>
+    :root {
+      --bg: #0F131A;
+      --bg-panel: #1B2230;
+      --bg-panel-2: #161C26;
+      --text: #EDF0F4;
+      --text-dim: #A6B0BE;
+      --line: #2A3442;
+      --line-soft: #222B38;
+      --accent: #4D8DF0;
+      --accent-dim: rgba(77, 141, 240, 0.12);
+      --green: #8ABE78;
+      --green-dim: rgba(138, 190, 120, 0.12);
+      --font: Arial, Helvetica, sans-serif;
+      --radius: 12px;
+      --radius-sm: 10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font: 400 16px/1.5 var(--font);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    ::selection { background: var(--accent); color: #0F131A; }
+    a { color: inherit; text-decoration: none; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    .wrap {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      flex: 1;
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      flex: none;
+    }
+
+    .brand-name {
+      font: 700 1.5rem/1 var(--font);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .header-sub {
+      font: 500 0.62rem/1 var(--font);
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-top: 0.45rem;
+    }
+
+    /* ── Section Labels ── */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font: 600 0.6rem/1 var(--font);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .section-label::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+    .section-label.drive { color: var(--accent); }
+    .section-label.community { color: var(--green); }
+
+    /* ── Link Cards ── */
+    .link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--line);
+      background: var(--bg-panel);
+      border-radius: var(--radius);
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    }
+    .link-card:hover, .link-card:active {
+      border-color: var(--accent);
+      background: var(--accent-dim);
+      transform: translateY(-1px);
+    }
+
+    .link-tag {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      flex: none;
+      background: var(--bg-panel-2);
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      font: 700 0.72rem/1 var(--font);
+      text-transform: uppercase;
+    }
+    .link-tag.drive {
+      color: var(--accent);
+      border-color: rgba(77, 141, 240, 0.4);
+      background: rgba(77, 141, 240, 0.12);
+    }
+    .link-tag.community {
+      color: var(--green);
+      border-color: rgba(138, 190, 120, 0.35);
+      background: var(--green-dim);
+    }
+
+    .link-name {
+      flex: 1;
+      min-width: 0;
+      font: 600 0.88rem/1.25 var(--font);
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
+    .link-card:hover .link-name { color: var(--accent); }
+
+    .link-arrow {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      flex: none;
+      transition: transform 0.2s, color 0.2s;
+    }
+    .link-card:hover .link-arrow {
+      transform: translateX(3px);
+      color: var(--accent);
+    }
+
+    /* ── Back Button ── */
+    .back-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.2rem;
+      border: 1px solid var(--line);
+      background: var(--bg-panel);
+      border-radius: var(--radius-sm);
+      font: 700 0.74rem/1 var(--font);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .back-btn:hover, .back-btn:active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-dim);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--line);
+      font: 400 0.56rem/1 var(--font);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--line);
+    }
+
+    /* ── Animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    .reveal.in-view {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .link-card, .link-card:hover { transform: none; }
+    }
+
+    @media (min-width: 600px) {
+      .wrap { padding: 2.25rem 2rem 3rem; gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Header -->
+  <header class="header reveal">
+    <p class="header-sub">HNU Drives</p>
+  </header>
+
+  <!-- Drive -->
+  <section>
+    <p class="section-label drive reveal">Drive</p>
+    <div class="link-list">
+
+      <a class="link-card reveal" href="https://drive.google.com/drive/folders/1-A63HbiRaK_YWR4qHEH7lzFEtaeFqbu3" target="_blank" rel="noopener">
+        <span class="link-tag drive" aria-hidden="true">L2</span>
+        <span class="link-name">Drive Level 2</span>
+        <span class="link-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="link-card reveal" href="https://drive.google.com/open?id=1pGfeRfDt1jc_QwBXygfabgltUe7Zhhr-&amp;usp=drive_fs" target="_blank" rel="noopener">
+        <span class="link-tag drive" aria-hidden="true">L1</span>
+        <span class="link-name">Drive Level 1</span>
+        <span class="link-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="link-card reveal" href="https://drive.google.com/drive/folders/1H_HajTKEasPA_7_bVgg1pcDm_qDxLsnh?usp=sharing" target="_blank" rel="noopener">
+        <span class="link-tag drive" aria-hidden="true">L0</span>
+        <span class="link-name">Drive Level 0</span>
+        <span class="link-arrow" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section>
+    <p class="section-label community reveal">Community</p>
+    <div class="link-list">
+
+      <a class="link-card reveal" href="https://chat.whatsapp.com/Cv43H7eeIulEzjSwyAb3aB" target="_blank" rel="noopener">
+        <span class="link-tag community" aria-hidden="true">L1</span>
+        <span class="link-name">Community Level 1</span>
+        <span class="link-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="link-card reveal" href="https://chat.whatsapp.com/L2Bk2ubjBPW8hzmVec6WmC" target="_blank" rel="noopener">
+        <span class="link-tag community" aria-hidden="true">L0</span>
+        <span class="link-name">Community Level 0</span>
+        <span class="link-arrow" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Back -->
+  <a class="back-btn reveal" href="index.html">← Back to Resources</a>
+
+  <footer class="footer">
+    <p>© 2026 AS</p>
+  </footer>
+
+</div>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

@@ -108,6 +108,15 @@
       gap: 0.5rem;
     }
 
+    .res-group {
+      margin-top: 0.55rem;
+      font: 600 0.78rem/1 var(--font);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      opacity: 0.9;
+    }
+
     .res-card {
       display: flex;
       align-items: center;
@@ -279,6 +288,13 @@
       letter-spacing: 0.01em;
       color: var(--accent);
       text-shadow: 0 0 26px rgba(77, 141, 240, 0.45);
+    }
+    .w-l2 {
+      display: block;
+      margin-top: 0.45rem;
+      font: 600 clamp(1rem, 4.5vw, 1.7rem)/1.2 var(--font);
+      letter-spacing: 0.03em;
+      color: var(--accent);
     }
 
     /* ── Welcome Intro ── */
@@ -549,45 +565,104 @@
   </div>
 
   <div class="intro-text">
-    <p class="intro-ar ar1" dir="rtl">أهلاً بيك يا بشمهندس <span class="wave">👋</span></p>
-    <p class="intro-ar ar2" dir="rtl">يارب تكون بداية خير وتوفيق ليك، وتحقق الحلم اللي داخل الجامعة عشانه.</p>
-    <p class="intro-ar ar3" dir="rtl">وأتمنى أقدر أساعدك في رحلتك، ولو احتجت أي مساعدة أنا معاك .</p>
+    <p class="intro-ar ar1" dir="rtl">أهلا بيكم يا بشمهندسين <span class="wave">👋</span></p>
+    <p class="intro-ar ar2" dir="rtl">يارب تكون بدايه خير و توفيق ليكم, و تحققوا حلمكم إللي داخلين علشانه.</p>
+    <p class="intro-ar ar3" dir="rtl">و أتمني اقدر أساعدكم في رحلتكم و لو إحتاجتم أي مساعده أنا معاكم</p>
     <p class="intro-en">Wishing you success every step of the way! 🎓✨</p>
   </div>
 </div>
 
 <div class="wrap">
 
-  <!-- Welcome -->
-  <p class="welcome reveal"><span class="w-l1">Welcome to a new chapter.</span></p>
-
-  <!-- Header -->
-  <header class="header reveal">
-    <p class="header-sub">Resources</p>
-  </header>
+<!-- Welcome -->
+  <p class="welcome reveal"><span class="w-l1">Welcome to a new chapter</span><span class="w-l2">Mechatronics and Robotics Engineering</span></p>
 
   <!-- Resources -->
   <section>
-    <p class="section-label reveal">Resources (Your Journey Starts Here)</p>
     <div class="resources">
 
-      <a class="res-card reveal" href="https://www.youtube.com/watch?v=oqqoxCb-NSs&list=PLhx4zaYkEjI-p2jCRAnN9YKdvxJ6EiOnb" target="_blank" rel="noopener">
+      <p class="res-group reveal">Academic Playlists</p>
+
+      <a class="res-card reveal" href="https://www.youtube.com/watch?v=3sXzIC03o74&list=PL10-cQcyIxzEn2k7wREhHcWYGZLF9OVqw" target="_blank" rel="noopener">
         <span class="res-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2.5" y="2.5" width="19" height="19" rx="4"/>
-            <path d="M9.5 5.5V18.5"/>
-            <path d="M16.5 5.5H9.5v8.5"/>
-            <path d="M14.5 8A3 3 0 0 1 14.5 14H9.5"/>
-            <circle cx="16.5" cy="4" r="1.1" fill="currentColor" stroke="none"/>
-            <circle cx="16.5" cy="20" r="1.1" fill="currentColor" stroke="none"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h10v4H3zM15 6h6v4h-6z"/>
+            <path d="M3 14h6v4H3zM11 14h10v4H11z"/>
+            <path d="M6 10v4M12 10v4M16 10v4M18 10v4"/>
           </svg>
         </span>
         <div class="res-info">
-          <p class="res-title">YouTube Playlist — Proteus</p>
-          <p class="res-desc">Simulation &amp; circuit design</p>
+          <p class="res-title">YouTube Playlist — Production</p>
+          <p class="res-desc">Production engineering</p>
         </div>
         <span class="res-arrow" aria-hidden="true">→</span>
       </a>
+
+      <a class="res-card reveal" href="https://www.youtube.com/watch?v=BYVQ0E0v91k&list=PLlDFxnso0FnQSGqOQpTKmYsQDXT06zWgw" target="_blank" rel="noopener">
+        <span class="res-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="3" width="16" height="18" rx="2"/>
+            <path d="M4 8h16"/>
+            <path d="M8 5v6M16 5v6M10 13.5l4 4M14 13.5l-4 4M8.5 17h2M13.5 17h2M9.5 15h2M12.5 15h2"/>
+          </svg>
+        </span>
+        <div class="res-info">
+          <p class="res-title">YouTube Playlist — Math 1</p>
+          <p class="res-desc">Mathematics fundamentals</p>
+        </div>
+        <span class="res-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="res-card reveal" href="https://www.youtube.com/watch?v=-q18cgk9_Bs&list=PLka1IWY71Cp_bHMpZtjF6UOvTJrouEbq2" target="_blank" rel="noopener">
+        <span class="res-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="1.6"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4.2"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)"/>
+          </svg>
+        </span>
+        <div class="res-info">
+          <p class="res-title">YouTube Playlist — Physics 1</p>
+          <p class="res-desc">Physics fundamentals</p>
+        </div>
+        <span class="res-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="res-card reveal" href="https://www.youtube.com/watch?v=eSvRLGbd4jw&list=PLPW5Qx0M5NSrLqSfnlIKLsMa4WI6iocUR" target="_blank" rel="noopener">
+        <span class="res-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3.2"/>
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+          </svg>
+        </span>
+        <div class="res-info">
+          <p class="res-title">YouTube Playlist — Mechanics</p>
+          <p class="res-desc">Engineering mechanics</p>
+        </div>
+        <span class="res-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="res-card reveal" href="https://www.youtube.com/watch?v=alX1kLpUBjQ&list=PLZJc_LAnhhPbAYUSRgjIIHHCPt3Fa1YPw" target="_blank" rel="noopener">
+        <span class="res-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="12" rx="2"/>
+            <path d="M7 5v10"/>
+            <path d="M3 9h18M3 13h18"/>
+            <rect x="5" y="15" width="2" height="3"/>
+            <rect x="9" y="15" width="2" height="3"/>
+            <rect x="13" y="15" width="2" height="3"/>
+            <rect x="17" y="15" width="2" height="3"/>
+          </svg>
+        </span>
+        <div class="res-info">
+          <p class="res-title">YouTube Playlist — Computer Skills</p>
+          <p class="res-desc">Essential computer skills</p>
+        </div>
+        <span class="res-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <p class="res-group reveal">Additional Courses</p>
 
       <a class="res-card reveal" href="https://www.youtube.com/watch?v=XDuWyYxksXU&list=PLDoPjvoNmBAwy-rS6WKudwVeb_x63EzgS" target="_blank" rel="noopener">
         <span class="res-icon" aria-hidden="true">
@@ -620,6 +695,26 @@
         <span class="res-arrow" aria-hidden="true">→</span>
       </a>
 
+      <a class="res-card reveal" href="https://www.youtube.com/watch?v=oqqoxCb-NSs&list=PLhx4zaYkEjI-p2jCRAnN9YKdvxJ6EiOnb" target="_blank" rel="noopener">
+        <span class="res-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="4"/>
+            <path d="M9.5 5.5V18.5"/>
+            <path d="M16.5 5.5H9.5v8.5"/>
+            <path d="M14.5 8A3 3 0 0 1 14.5 14H9.5"/>
+            <circle cx="16.5" cy="4" r="1.1" fill="currentColor" stroke="none"/>
+            <circle cx="16.5" cy="20" r="1.1" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <div class="res-info">
+          <p class="res-title">YouTube Playlist — Proteus</p>
+          <p class="res-desc">Simulation &amp; circuit design</p>
+        </div>
+        <span class="res-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <p class="res-group reveal">Drives</p>
+
       <a class="res-card reveal" href="hnu-drives.html">
         <span class="res-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -629,6 +724,20 @@
         <div class="res-info">
           <p class="res-title">HNU Drives</p>
           <p class="res-desc">Drive &amp; community levels</p>
+        </div>
+        <span class="res-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="res-card reveal" href="https://drive.google.com/drive/folders/1nL-AmRSMwoFMcLI_8EpsRM-Cw6aL4huY" target="_blank" rel="noopener">
+        <span class="res-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 7.5A2.5 2.5 0 0 1 5.5 5h4L11 7h7.5A2.5 2.5 0 0 1 21 9.5v7a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 16.5z"/>
+            <path d="M3 9.5h18"/>
+          </svg>
+        </span>
+        <div class="res-info">
+          <p class="res-title">HU Drive</p>
+          <p class="res-desc">Helwan University drive</p>
         </div>
         <span class="res-arrow" aria-hidden="true">→</span>
       </a>
